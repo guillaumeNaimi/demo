@@ -27,8 +27,17 @@ dependencies {
 	implementation("com.netflix.graphql.dgs:graphql-dgs-webflux-starter")
 	implementation("io.arrow-kt:arrow-core:0.13.2")
 
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.springframework.boot:spring-boot-starter-test") {
+		exclude(module = "junit")
+		exclude(module = "mockito-core")
+	}
+	testImplementation("org.junit.jupiter:junit-jupiter-api")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 	testImplementation("io.projectreactor:reactor-test")
+	testImplementation("io.kotest:kotest-runner-junit5:4.6.2")
+	testImplementation("com.ninja-squad:springmockk:3.0.1")
+	testImplementation("io.kotest.extensions:kotest-assertions-arrow:1.0.3")
+
 }
 
 tasks.withType<KotlinCompile> {

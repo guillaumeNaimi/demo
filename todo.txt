@@ -1,0 +1,7 @@
+todo list :
+- do some tests
+- make mutation add rating in shows
+- do some validation with arrow lib
+- configure errors to display correctly
+- implement a dataloader for ratings
+- see subscriptions

@@ -1,5 +1,6 @@
 package com.example.demo.domain.model
 
 data class Rating(
-    val avgStars: Float,
+    val stars: Int,
+    val title: String
 )

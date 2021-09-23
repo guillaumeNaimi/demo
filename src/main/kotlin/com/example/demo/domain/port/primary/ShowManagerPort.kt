@@ -1,10 +1,11 @@
 package com.example.demo.domain.port.primary
 
 import arrow.core.Either
+import com.example.demo.domain.ShowsFilter
 import com.example.demo.domain.model.Show
-import java.lang.Exception
+import kotlin.Exception
 
 
 interface ShowManagerPort {
-    fun getShows(titleFilter : String?): Either<Exception, List<Show>>
+    fun getShows(showsFilter: ShowsFilter): Either<Exception, List<Show>>
 }

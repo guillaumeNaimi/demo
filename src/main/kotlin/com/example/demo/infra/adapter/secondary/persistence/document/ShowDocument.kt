@@ -8,7 +8,7 @@ data class ShowDocument(
 ) {
     fun toShow() =
         Show(
-            title = title,
-            releaseYear = releaseYear
+            title,
+            releaseYear
         )
 }

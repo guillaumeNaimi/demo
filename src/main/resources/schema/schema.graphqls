@@ -1,17 +1,18 @@
 type Query {
-    shows(titleFilter: String): [Show]
+    shows(titleFilter: String): [Show!]
 }
 
 type Mutation {
-    addRating(title: String, stars: Int): Rating
+    addRating(title: String, stars: Int): Rating!
 }
 
 type Show {
-    title: String
-    releaseYear: Int
-    rating: Rating
+    title: String!
+    releaseYear: Int!
+    avgStars: Float
 }
 
 type Rating {
-    avgStars: Float
+    title: String!
+    stars: Int!
 }
